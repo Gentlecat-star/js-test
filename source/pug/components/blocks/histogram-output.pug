@@ -1,0 +1,9 @@
+mixin histogram-output(options = {})
+  - const items = options.items ? options.items : [];
+
+  .histogram-output&attributes(attributes)
+    h2 Гистограмма
+    .histogram-output__wrapper
+      ul.histogram-output__list
+        each item in items
+          +histogram-item(item.letter, item.fullBarWidth, item.percentValue).histogram-output__item

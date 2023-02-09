@@ -1,0 +1,48 @@
+.histogram-form {
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-auto-rows: repeat(4, 1fr);
+  justify-content: start;
+  gap: 30px;
+}
+
+.histogram-form__title {
+  margin-bottom: 30px;
+}
+
+.histogram-form textarea {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+.histogram-form input[type="submit"] {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.histogram-form input[type="reset"] {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.histogram-form input[type="submit"],
+.histogram-form input[type="reset"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  min-width: 120px;
+
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+
+  background-color: #55cc11;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}

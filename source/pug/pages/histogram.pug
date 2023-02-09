@@ -1,0 +1,32 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Гистограмма частоты использования символов" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = false
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentUrl = "" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  -
+    const items = [
+      {
+        letter: "a",
+        fullBarWidth: "250",
+        percentValue: "50%",
+      },
+      {
+        letter: "b",
+        fullBarWidth: "100",
+        percentValue: "20%",
+      }
+    ]
+
+  main
+    .container
+      section.histogram
+        h1 Гистограмма частоты использования символов
+        +histogram-form().histogram__form
+        +histogram-output({items: items}).histogram__output

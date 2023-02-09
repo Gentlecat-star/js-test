@@ -51,19 +51,14 @@ block main
   -
     const pages = [
       {
-        name: "UI-kit — ui-kit.html",
-        src: "ui-kit.html"
-      },
-      {
-        name: "Главная — index.html",
-        src: "index.html"
-      },
+        name: "Гистограмма частоты использования символов",
+        src: "histogram.html"
+      }
     ]
 
   main
     .container
-      img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
-      h1 Список страниц
+      h1 Список примеров
       ol
         each page in pages
           li

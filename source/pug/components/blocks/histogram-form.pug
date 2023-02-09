@@ -1,0 +1,7 @@
+mixin histogram-form()
+  .histogram-form__wrapper
+    h2 Входные данные
+    form.histogram-form(action="#")&attributes(attributes)
+      textarea(name="string", cols="60", rows="10")
+      input(type="submit")
+      input(type="reset")

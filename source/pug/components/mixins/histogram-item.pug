@@ -1,0 +1,7 @@
+mixin histogram-item(letter, fullBarWidth, percentValue)
+  li.histogram-item&attributes(attributes)
+    .histogram-item__inner
+      span.histogram-item__letter!= `${letter}:`
+      .histogram-item__bar
+        .histogram-item__value(style=`width: ${fullBarWidth}px`)
+      span.histogram-item__percent!= percentValue

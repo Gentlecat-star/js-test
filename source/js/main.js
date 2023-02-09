@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
+import {Histogram} from './modules/histogram/histogram';
 
 // ---------------------------------
 
@@ -24,6 +25,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    const histogramForm = document.querySelector('.histogram-form');
+    const histogramOutput = document.querySelector('.histogram-output');
+    if (histogramForm && histogramOutput) {
+      const histogram = new Histogram(histogramForm, histogramOutput);
+      histogram.init();
+    }
   });
 });
 
